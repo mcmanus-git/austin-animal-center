@@ -1,0 +1,15 @@
+Brotli @ file:///Users/runner/miniforge3/conda-bld/brotli-split_1635845996591/work
+certifi==2022.6.15
+click @ file:///Users/runner/miniforge3/conda-bld/click_1651215220522/work
+dash @ file:///home/conda/feedstock_root/build_artifacts/dash_1657882603280/work
+dash-bootstrap-components @ file:///home/conda/feedstock_root/build_artifacts/dash-bootstrap-components_1656527759387/work
+Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1657844361786/work
+Flask-Compress @ file:///home/conda/feedstock_root/build_artifacts/flask-compress_1651163502372/work
+importlib-metadata @ file:///Users/runner/miniforge3/conda-bld/importlib-metadata_1653252883293/work
+itsdangerous @ file:///home/conda/feedstock_root/build_artifacts/itsdangerous_1648147185463/work
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1654302431367/work
+MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1648737704633/work
+plotly @ file:///home/conda/feedstock_root/build_artifacts/plotly_1656046979833/work
+tenacity @ file:///home/conda/feedstock_root/build_artifacts/tenacity_1626090218611/work
+Werkzeug @ file:///home/conda/feedstock_root/build_artifacts/werkzeug_1651670883478/work
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1649012893348/work
