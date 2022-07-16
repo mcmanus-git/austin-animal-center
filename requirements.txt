@@ -7,7 +7,6 @@ flask-compress==1.12
 importlib-metadata==4.11.4
 itsdangerous==2.1.2
 jinja2==3.1.2
-libcxx==12.0.0
 libffi==3.3
 markupsafe==2.1.1
 ncurses==6.3
