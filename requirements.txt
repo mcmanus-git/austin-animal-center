@@ -11,7 +11,6 @@ markupsafe==2.1.1
 plotly==5.9.0
 setuptools==61.2.0
 tenacity==8.0.1
-tk==8.6.12
 werkzeug==2.1.2
 xz==5.2.5
 zipp==3.8.0
