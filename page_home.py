@@ -1,8 +1,16 @@
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from navbar import create_navbar
+from data_helpers import get_intake_outcomes_data
+from graph_helpers import aac_color, create_intake_animal_type_count_hbar
 
 nav = create_navbar()
+
+# Data
+intake_df, outcome_df = get_intake_outcomes_data()
+
+# Graphs
+intake_animal_type_count_hbar = create_intake_animal_type_count_hbar(intake_df, aac_color('blue'))
 
 header = html.H3('Welcome to home page!')
 
@@ -74,7 +82,9 @@ def create_page_home():
             [
                 header,
                 icon_card,
-                tabs
+                tabs,
+                html.Br(),
+                dcc.Graph(figure=intake_animal_type_count_hbar)
             ], style={'margin': '5% 5% 5% 5%'}
         )
     ])
