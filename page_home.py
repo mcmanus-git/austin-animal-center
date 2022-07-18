@@ -2,7 +2,7 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 from navbar import create_navbar
 from data_helpers import get_intake_outcomes_data
-from graph_helpers import aac_color, create_intake_animal_type_count_hbar
+from graph_helpers import aac_color, create_intake_animal_type_count_hbar, create_intake_over_time
 
 nav = create_navbar()
 
@@ -11,8 +11,9 @@ intake_df, outcome_df = get_intake_outcomes_data()
 
 # Graphs
 intake_animal_type_count_hbar = create_intake_animal_type_count_hbar(intake_df, aac_color('blue'))
+intake_over_time = create_intake_over_time(intake_df)
 
-header = html.H3('Welcome to home page!')
+header = html.H3('Welcome to home page! Site Under Construction.')
 
 icon_card = dbc.Card(
     dbc.CardBody(
@@ -31,8 +32,7 @@ tab1_content = html.Div(
              [
                  html.Br(),
                  html.H4("Check out some dogs"),
-                 dcc.Markdown("You can look by category by clicking a link below or see a list of my "
-                              "coolest portfolio projects [here](/portfolio-highlights)."
+                 dcc.Markdown("Some dog info I'm sure you're going to love)."
                               ),
                  # html.Br(),
                  # cards_row_1,
@@ -81,10 +81,17 @@ def create_page_home():
         html.Div(
             [
                 header,
+                html.Br(),
+                html.Br(),
                 icon_card,
+                html.Br(),
                 tabs,
                 html.Br(),
-                dcc.Graph(figure=intake_animal_type_count_hbar)
+                html.Br(),
+                dcc.Graph(figure=intake_animal_type_count_hbar),
+                html.Br(),
+                html.Br(),
+                dcc.Graph(figure=intake_over_time),
             ], style={'margin': '5% 5% 5% 5%'}
         )
     ])
