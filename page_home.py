@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 from navbar import create_navbar
 from data_helpers import get_intake_outcomes_data
 from graph_helpers import aac_color, create_intake_animal_type_count_hbar, create_intake_over_time
+from app import app
 
 nav = create_navbar()
 
@@ -12,6 +13,14 @@ intake_df, outcome_df = get_intake_outcomes_data()
 # Graphs
 intake_animal_type_count_hbar = create_intake_animal_type_count_hbar(intake_df, aac_color('blue'))
 intake_over_time = create_intake_over_time(intake_df)
+
+# Images
+pet_image = html.Div(html.Img(src=app.get_asset_url('silvana-carlos-TPdR4J19SGQ-unsplash.jpg'), style={'width': '100%'}))
+pet_image_credit = html.A("  Photo: Silvana Carlos via Unsplash",
+                          href='https://unsplash.com/photos/TPdR4J19SGQ',
+                          target="_blank",
+                          style={'fontSize': 10}
+                          )
 
 header = html.H3('Welcome to home page! Site Under Construction.')
 
@@ -78,12 +87,14 @@ tabs = dbc.Tabs(
 def create_page_home():
     layout = html.Div([
         nav,
+        pet_image,
+        pet_image_credit,
         html.Div(
             [
                 header,
                 html.Br(),
                 html.Br(),
-                icon_card,
+                # icon_card,
                 html.Br(),
                 tabs,
                 html.Br(),
