@@ -18,4 +18,4 @@ numpy
 pandas==1.4.2
 lxml==4.8.0
 html5lib==1.1
-pyarrow=8.0.0
+pyarrow==8.0.0
